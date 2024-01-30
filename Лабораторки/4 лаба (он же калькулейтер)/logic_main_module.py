@@ -10,14 +10,11 @@ while start_trigger == 1:
     math_action = input("Математическое действие")
 
     if math_action == "+":
-        result = arip.adding(x, y)
-        print("Результат", result)
+        print("Результат",arip.adding(x, y))
     elif math_action == "-":
-        result = arip.division(x, y)
-        print("Результат", result)
+
+        print("Результат", arip.subtraction(x, y))
     elif math_action == "*":
-        result = arip.multiplying(x, y)
-        print("Результат", result)
+        print("Результат", arip.multiplying(x, y))
     elif math_action == "/":
-        result = arip.division(x, y)
-        print("Результат", result)
+        print("Результат", arip.division(x, y))
