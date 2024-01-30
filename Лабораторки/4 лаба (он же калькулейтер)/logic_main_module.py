@@ -1,7 +1,7 @@
 import arphmetic_module as arip
 
-start_trigger = 1
-while start_trigger == 1:
+
+while True:
     print("Введите числа x и y, если хотите завершить работу калькулятора раньше введите значение 000")
     x = int(input("x"))
     if x == 000:
