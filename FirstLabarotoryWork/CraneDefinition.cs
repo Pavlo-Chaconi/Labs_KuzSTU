@@ -32,12 +32,30 @@ namespace FirstLabarotoryWork
 
         public void raise_to_a_given_height(double given_height)
         {
-            curent_height = curent_height + given_height;
+            if (given_height > max_lifting_height)
+            {
+                Console.WriteLine("ОШИБКА! Превышена допустимая высота!");
+                System.Threading.Thread.CurrentThread.Abort();
+            }
+            else curent_height = curent_height + given_height;
+
+            if (curent_height > max_lifting_height)
+            {
+                Console.WriteLine("ОШИБКА! Превышена допустимая высота!");
+                System.Threading.Thread.CurrentThread.Abort();
+            }
+
         }
 
         public void cargo_attach(double weight_of_attachment_cargo)
         {
-            cargo_weight = cargo_weight + weight_of_attachment_cargo;
+            if (weight_of_attachment_cargo > carrying)
+            {
+                Console.WriteLine("ОШИБКА! Превышен порог грузоподъемности!");
+                System.Threading.Thread.CurrentThread.Abort();
+            }
+            else cargo_weight = cargo_weight + weight_of_attachment_cargo;
+
         }        
         
         public void cargo_deattach(double weight_of_attachment_cargo)
@@ -51,6 +69,13 @@ namespace FirstLabarotoryWork
             return string.Format("Характеристика подъемного крана:\n" + ":Номер крана - {0}\n:Максимальная высота подъема - {1}\n:Текущая высота подъема - {2}" +
                 "\n:Текущая скорость подъема или спуска - {3}\n:Грузоподъемность - {4}\n:Вес груза - {5}" +
                 "", nums_of_crane, max_lifting_height, curent_height, velocity_of_lifting_or_descent,carrying,cargo_weight);
+        }
+
+        public string MethodsPassport()
+        {
+            return string.Format("Местоположение крана:\n" + "– Номер {0}" +
+                " \n– Поднятая высота : {1} м\n - Прицепил груз {2} кг\n - Отцепил груз: {3} м/с\n",
+                nums_of_crane, curent_height, cargo_weight, cargo_weight);
         }
 
         public CraneDefinition(int max_carrying,double max_lifting_height,double velocity_of_lifing_or_descent)
