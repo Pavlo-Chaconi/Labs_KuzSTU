@@ -74,7 +74,7 @@ namespace FirstLabarotoryWork
         public string MethodsPassport()
         {
             return string.Format("Местоположение крана:\n" + "– Номер {0}" +
-                " \n– Поднятая высота : {1} м\n - Прицепил груз {2} кг\n - Отцепил груз: {3} м/с\n",
+                " \n– Поднятая высота : {1} м\n - Прицепил груз {2} кг\n - Отцепил груз: {3} \n",
                 nums_of_crane, curent_height, cargo_weight, cargo_weight);
         }
 
