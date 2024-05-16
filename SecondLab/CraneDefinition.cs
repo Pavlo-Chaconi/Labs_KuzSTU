@@ -65,6 +65,20 @@ namespace SecondLab
             deatchment_cargo_weight = weight_of_attachment_cargo;
         }
 
+        public double current_height_property
+        {
+            get { return curent_height; }
+            set
+            {
+                if (value < 0)
+                    curent_height = 0;
+                else if (value > max_lifting_height)
+                    curent_height = max_lifting_height;
+                else
+                    curent_height = value;
+            }
+        }
+
 
         public string CranePassport()
         {
@@ -79,6 +93,8 @@ namespace SecondLab
                 " \n– Поднятая высота : {1} м\n - Прицепил груз {2} кг\n - Отцепил груз: {3} \n",
                 nums_of_crane, curent_height, cargo_weight, deatchment_cargo_weight);
         }
+
+
 
         public CraneDefinition(int max_carrying, double max_lifting_height, double velocity_of_lifing_or_descent)
         {
