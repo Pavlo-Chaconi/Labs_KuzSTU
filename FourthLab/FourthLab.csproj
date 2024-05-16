@@ -49,5 +49,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ElectricChargeBibliotecs\ElectricChargeBibliotecs.csproj">
+      <Project>{933f21c7-00ab-4d20-8386-f9678cd39b47}</Project>
+      <Name>ElectricChargeBibliotecs</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
