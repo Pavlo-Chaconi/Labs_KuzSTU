@@ -43,6 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClientClassDefinition.cs" />
+    <Compile Include="EmployeeClassDefinition.cs" />
+    <Compile Include="HotelClassDefinition.cs" />
+    <Compile Include="HotelsRoomDefinition.cs" />
+    <Compile Include="HumanClassDefinition.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
