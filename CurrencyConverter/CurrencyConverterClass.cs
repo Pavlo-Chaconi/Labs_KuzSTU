@@ -28,5 +28,10 @@ namespace CurrencyConverter
         {
             return response = CNY * CNY_RUB;
         }
+
+        public static string information_about_converter_course()
+        {
+            return string.Format("Курсы валют по состоянию на 12.05.2024 \n" + "1 USD/RUB {0} \n" + "2 EUR/USD {1} \n" + "3 CNY/RUB {2} \n", USD_RUB, EUR_USD, CNY_RUB);
+        }
     }
 }

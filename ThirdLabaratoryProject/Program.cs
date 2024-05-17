@@ -15,7 +15,7 @@ namespace ThirdLabaratoryProject
             {
                 Console.WriteLine("Для конвертации рублей в доллары нажмите 1 \n" + 
                     "Для конвертации долларов в евро нажмите 2 \n" + 
-                    "Для конвертации юаней в рубли нажмите 3");
+                    "Для конвертации юаней в рубли нажмите 3 \n" + "Для вывода информации о курсах обмена нажмите 4 \n");
                 switch (Console.ReadLine())
                 {
                     case "1":
@@ -33,6 +33,9 @@ namespace ThirdLabaratoryProject
                         Console.WriteLine("Введите сумму для ковертации в рубли");
                         double CNYtoRUB = Convert.ToDouble(Console.ReadLine());
                         Console.WriteLine("Конвертировано {0} юаней в {1} рубли", CNYtoRUB, CurrencyConverterClass.convertCNYtoRUB(CNYtoRUB));
+                        break;
+                    case "4":
+                        Console.WriteLine(CurrencyConverterClass.information_about_converter_course());
                         break;
 
                 }
