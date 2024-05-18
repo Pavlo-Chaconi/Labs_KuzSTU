@@ -23,26 +23,28 @@ namespace SixthLabaratory
             roomType = "Люкс";
             clients = new List<ClientClassDefinition>();
             rooms = new List<HotelsRoomDefinition>();
-            Random random = new Random();
-            int roomCount = random.Next(1, 21);
-
-            for (int i = 1; i <= roomCount; i++)
-            {
-                HotelsRoomDefinition newRoom = new HotelsRoomDefinition(
-                    roomId:i,
-                    roomType: i % 2 == 0 ? "Вип" : "Обыкновенная",
-                    roomcapacity: 3,
-                    rooms: null);
-                rooms.Add(newRoom);
-            }
         }
 
-        public HotelsRoomDefinition(int roomId, string roomType, int roomcapacity, List<HotelsRoomDefinition> rooms)
+        public HotelsRoomDefinition(int roomId, string roomType, int roomcapacity)
         {
             this.roomId = roomId;
             this.roomType = roomType;
             this.roomcapacity = roomcapacity;
-            this.rooms = rooms;
+            clients = new List<ClientClassDefinition>();
+        }
+
+        public void InitializeRooms(int numberOfRooms)
+        {
+            Random random = new Random();
+            for (int i = 1; i <= numberOfRooms; i++)
+            {
+                HotelsRoomDefinition newRoom = new HotelsRoomDefinition(
+                    roomId: i,
+                    roomType: i % 2 == 0 ? "Вип" : "Обыкновенная",
+                    roomcapacity: 3
+                    );
+                rooms.Add(newRoom);
+            }
         }
 
         public string ClientRoomInfo()

@@ -16,7 +16,7 @@ namespace SixthLabaratory
         {
             full_name = "Кулеш Сергей Алексеевич";
             gender = "Мужской";
-            date_of_birth = new  DateTime(2001, 27, 01);
+            date_of_birth = new  DateTime(2001, 01, 27);
         }
 
         public HumanClassDefinition(string full_name, string gender, DateTime date_of_birth)
